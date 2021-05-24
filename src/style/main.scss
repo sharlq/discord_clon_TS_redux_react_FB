@@ -1,6 +1,9 @@
 @import 'config';
 @import 'sidebar';
 @import 'chat';
+@import 'chatHeader';
+@import 'chatinput';
+@import 'chatMessages';
 .App{
     display: flex;
 }

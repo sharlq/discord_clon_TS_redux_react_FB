@@ -205,7 +205,9 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-left: 2vw;
+  margin-left: 2vw;
+  margin-right: .5vw;
+  border-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -222,7 +224,6 @@ body {
 }
 
 .sidebarChannel_hash {
-  font-weight: 500;
   font-size: 30px;
   padding: 8px;
 }
@@ -233,11 +234,214 @@ body {
 }
 
 .chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #36393f;
   height: 100%;
   -webkit-box-flex: .75;
       -ms-flex: .75;
           flex: .75;
+}
+
+.chatHeader {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #8e9297;
+  margin-top: 5px;
+}
+
+.chatHeader h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatHeader_hash {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 24px;
+}
+
+.chatHeader input {
+  color: #8e9297;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.chatHeader_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2f3136;
+  border-radius: 3px;
+  padding: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatHeader_right {
+  -webkit-box-flex: .5;
+      -ms-flex: .5;
+          flex: .5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chatHeader .MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+.chatHeader .MuiSvgIcon-root:hover {
+  color: #c3c5c8;
+}
+
+.chatInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #494d55;
+  color: #8e9297;
+  border-radius: 7px;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1.5vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatInput form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatInput form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #8e9297;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 1vw;
+}
+
+.chatInput form button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatInput .MuiSvgIcon-root {
+  cursor: pointer;
+  color: #d0d2d4;
+  margin-left: .5vw;
+}
+
+.chatInput .MuiSvgIcon-root:hover {
+  color: white;
+}
+
+.chatInput .Gif {
+  color: #494d55;
+  background: #d0d2d4;
+  border-radius: 5px;
+}
+
+.chatInput .Gif:hover {
+  color: #494d55;
+  background: white;
+}
+
+.chatMessages {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.chatMessages .message {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 20px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chatMessages .message h4 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatMessages .message p {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatMessages .message .info {
+  margin-left: 1vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatMessages .message-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chatMessages .message-header_timeStamp {
+  margin-left: 1vw;
+  font-size: 14px;
+  color: #8e9297;
 }
 
 .App {
