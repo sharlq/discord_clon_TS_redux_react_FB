@@ -120,7 +120,10 @@
 .sidebarChannel{
     display: flex;
     height: fit-content;
-  padding-left: 2vw;
+    margin-left: 2vw;
+    margin-right: .5vw;
+    border-radius: 5px;
+
     align-items:center ;
     cursor: pointer;
     h4{
@@ -128,7 +131,6 @@
         align-items: center;
     }
     &_hash{
-        font-weight: 500;
         font-size: 30px;
         padding: 8px;
     }
