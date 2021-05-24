@@ -1,0 +1,14 @@
+import React from 'react'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ChannelsGroup from './channelsGroup'
+const Server = () => {
+    return (
+        <div className="server">
+            
+            <h4 className="server-name">Channel Name <ExpandMoreIcon/> </h4>
+            <ChannelsGroup />
+        </div>
+    )
+}
+
+export default Server

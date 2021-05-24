@@ -2,7 +2,74 @@
     display: flex;
     flex-direction: column;
     flex: .25;
-    background: black;
-    border-right: white 1px solid ;
+    background: $secondaryBack;
     height: 100%;
+    &-profile{
+        background: #292b2f;
+        display: flex;
+        z-index: 1;
+        height: 60px;
+        margin-top: auto;
+    }
+    .server{
+        background: $secondaryBack ;
+        &-name{
+            display: flex;
+            height: fit-content;
+            padding-left: 1vw;
+            margin-top: 1vh;
+            border-bottom: 3px solid $primaryBack;
+            justify-content:space-between ;
+        }
+        .channelsGroup{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 1vh;
+            color: $secondary;
+            &-header{
+                display: flex;
+                color: $secondary;  
+                height: fit-content;
+                justify-content: space-between;
+                align-items: center;
+                &_title{
+                    display:flex;
+                }
+            }
+            .expand{
+                font-size: 20px;
+            }
+            .addIcon{
+                cursor: pointer;
+            }
+            .addIcon:hover{
+                color:white;
+            }
+
+        }
+
+    }
+    
 }
+.sidebarChannel{
+    display: flex;
+    height: fit-content;
+    padding:.5vh 2vw ;
+    align-items:center ;
+    cursor: pointer;
+    h4{
+        display: flex;
+        align-items: center;
+    }
+    &_hash{
+        font-weight: 500;
+        font-size: 30px;
+        padding: 8px;
+    }
+}
+.sidebarChannel:hover{
+    color: $primary;
+    background: $primaryBack ;
+}
+
