@@ -1,17 +1,15 @@
 import React from 'react'
 import SidebarProfile from './SidebarProfile'
 import Server from './server/server'
+import Connection from './connection'
 
-interface Props {
- channel:string;
- channelId:string;
-}
 
 const Sidebar = ({}) => {
     return (
         <div className="sidebar">
             <Server/>
-            <SidebarProfile/>
+            <Connection channel={"channel1"} server={"server name"} />
+            <SidebarProfile id="#1" name="shehab"/>
         </div>
     )
 }
