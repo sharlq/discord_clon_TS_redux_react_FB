@@ -29,13 +29,61 @@ body {
 }
 
 .sidebar-profile {
+  padding: 10px;
   background: #292b2f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 1;
-  height: 60px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-profile_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar-profile_info .user {
+  padding-left: 5px;
+}
+
+.sidebar-profile_info p {
+  color: #8e9297;
+}
+
+.sidebar-profile_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar-profile_icons .red {
+  color: red;
+}
+
+.sidebar-profile_icons .dontDisplay {
+  display: none;
+}
+
+.sidebar-profile_icons .icon {
+  color: #8e9297;
+  padding: 8px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.sidebar-profile_icons .icon:hover {
+  background: #36393f;
 }
 
 .sidebar .server {
@@ -106,6 +154,50 @@ body {
   color: white;
 }
 
+.sidebar .connection {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid #36393f;
+  background-color: #292b2f;
+}
+
+.sidebar .connection-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3ba55c;
+}
+
+.sidebar .connection-status .signal {
+  font-size: 24px;
+}
+
+.sidebar .connection-info p {
+  color: #8e9297;
+}
+
+.sidebar .connection .disconnect {
+  color: #8e9297;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.sidebar .connection .disconnect:hover {
+  background: #36393f;
+}
+
 .sidebarChannel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,7 +205,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: .5vh 2vw;
+  padding-left: 2vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

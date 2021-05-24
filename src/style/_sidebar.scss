@@ -5,11 +5,41 @@
     background: $secondaryBack;
     height: 100%;
     &-profile{
-        background: #292b2f;
+        padding: 10px;
+        background: $bannerBack;
         display: flex;
         z-index: 1;
-        height: 60px;
+        height: fit-content;
         margin-top: auto;
+        justify-content: space-between;
+        align-items: center;
+        &_info{
+            display: flex;
+            .user{
+                padding-left:5px;
+            }
+            p{
+                color: $secondary;
+            }
+        }
+        &_icons{
+            display: flex;
+            .red{
+                color: red;
+            }
+            .dontDisplay{
+                display: none;
+            }
+            .icon{
+            color: $secondary;
+            padding: 8px;
+            border-radius: 7px;
+            cursor: pointer;
+            }
+            .icon:hover{
+                background: $primaryBack;
+                }
+        }
     }
     .server{
         background: $secondaryBack ;
@@ -20,6 +50,7 @@
             margin-top: 1vh;
             border-bottom: 3px solid $primaryBack;
             justify-content:space-between ;
+           
         }
         .channelsGroup{
             display: flex;
@@ -50,12 +81,46 @@
         }
 
     }
+
+    .connection{
+        justify-content:space-between ;
+        padding: 8px;
+        display: flex;
+        height: fit-content;
+        align-items: center;
+        border-bottom: 3px solid $primaryBack;
+        background-color: $bannerBack;
+        &-status{
+            display: flex;
+            color:$success;
+            .signal{
+                font-size: 24px;
+            }
+        }
+        &-info{
+            p{
+                color: $secondary;
+            }
+        }
+        .disconnect{
+            color: $secondary;
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .disconnect:hover{
+                background: $primaryBack;
+        }
+    }
     
 }
+
+
+
 .sidebarChannel{
     display: flex;
     height: fit-content;
-    padding:.5vh 2vw ;
+  padding-left: 2vw;
     align-items:center ;
     cursor: pointer;
     h4{
