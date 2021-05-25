@@ -309,9 +309,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .chatHeader .MuiSvgIcon-root {
@@ -442,6 +439,34 @@ body {
   margin-left: 1vw;
   font-size: 14px;
   color: #8e9297;
+}
+
+.login {
+  margin: auto;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login .login-logo {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
+}
+
+.login button {
+  width: 30VH;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 30vh;
+  height: 50px;
+  background: #5865f1;
 }
 
 .App {
