@@ -4,7 +4,7 @@ import ChatMessages from './ChatMessages'
 const Chat = () => {
     return (
         <div className="chat">
-            <ChatHeader channel="Youtube"/>
+            <ChatHeader />
             <ChatMessages />
             <ChatInput/>
         </div>
