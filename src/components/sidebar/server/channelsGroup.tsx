@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react'
+import React, { MouseEvent,useState,useEffect } from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import Channel from './channel';
@@ -10,7 +10,22 @@ interface Channell  {
     
     
 }
-const ChannelsGroup:React.FC<{channels:Channell[]|null|undefined}> = ({channels}) => {
+const ChannelsGroup:React.FC = () => {
+
+ const [channels,setChannels] = useState<Channell[]|null|undefined>(null)
+
+ useEffect(()=>{
+        db.collection("channels").onSnapshot((snapshot)=>
+        setChannels(
+            snapshot.docs.map((doc)=>({
+                id: doc.id,
+                channel: doc.data(),
+            })
+            )
+        )
+        )
+ },[])
+
 const handleAddChannel =(e:MouseEvent<SVGSVGElement>) =>{
     e.preventDefault();
     const channelName = prompt("Enter a new channel name")
@@ -30,9 +45,6 @@ const handleAddChannel =(e:MouseEvent<SVGSVGElement>) =>{
             <AddIcon onClick={(e)=>handleAddChannel(e)} className="addIcon"/>
             </div>
             {channels ? channels.map((ch):JSX.Element=><Channel id={ch.id} channel={ch.channel.channelName} />):null }
-            {/* <Channel id="1" channel="Youtube" />
-            <Channel id="2" channel="Chat one" />
-            <Channel id="1" channel="Chat two" /> */}
         </div>
     )
 }
