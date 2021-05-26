@@ -15,7 +15,7 @@ const SidebarProfile:React.FC<{pic?:string,id:string,name:string}> = ({pic,id,na
              <Avatar src={pic} alt={name}  />
              <div className="user">
                  <h4>{name}</h4>
-                 <p>{id.substring(0,5)}</p>
+                 <p>#{id.substring(0,5)}</p>
              </div>
              </div>
             <div className="sidebar-profile_icons">

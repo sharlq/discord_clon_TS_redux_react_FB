@@ -5,11 +5,14 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import SearchIcon from '@material-ui/icons/Search';
 import SendIcon from '@material-ui/icons/Send';
 import HelpIcon from '@material-ui/icons/Help';
+import {useSelector} from "react-redux"
+import {selectChannelId,selectChannelName} from "../../features/appSlice"
 
-const Chatheader:React.FC<{channel:string}> = ({channel}) => {
+const Chatheader:React.FC = () => {
+    const channel = useSelector(selectChannelName);
     return (
         <div className="chatHeader">
-            <h4><span className="chatHeader_hash">#</span>{channel}</h4>
+            <h4><span className="chatHeader_hash">#</span>{channel? channel:null}</h4>
             <div className="chatHeader_right">
                 <NotificationsIcon />
                 <LocationOnIcon />

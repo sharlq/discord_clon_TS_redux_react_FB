@@ -367,9 +367,11 @@ body {
 }
 
 .chatInput form button {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 0;
+  height: 0;
+  background: none;
+  border: none;
+  color: transparent;
 }
 
 .chatInput .MuiSvgIcon-root {
