@@ -30,7 +30,7 @@ const App =() => {
  },[dispatch])
   return (
     <div className="App">
-      {user ? (
+      {user.uid!=="" ? (
       <>
       <Sidebar/>
       <Chat/>
