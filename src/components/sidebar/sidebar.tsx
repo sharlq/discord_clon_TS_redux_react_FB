@@ -30,7 +30,7 @@ const Sidebar = ({}) => {
         <div className="sidebar">
             <Server channels={channels}/>
             <Connection channel={"channel1"} server={"server name"} />
-            <SidebarProfile pic={user.photo} id={user.uid} name={user.displayName}/>
+           <SidebarProfile pic={user.photo} id={user.uid} name={user.displayName}/>
         </div>
     )
 }

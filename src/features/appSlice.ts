@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import {RootState} from "../app/store"
 const initialState = {
-    channelId:null,
+    channelId:undefined,
     channelName:null
     
 }
@@ -18,6 +18,6 @@ const appSlice = createSlice({
 });
 
 export const { setChannelInfo } = appSlice.actions
-export const selectChannelId =(state) => state.app.channelId;
-export const selectChannelName = (state) => state.app.channelName;
+export const selectChannelId =(state:RootState) => state.app.channelId;
+export const selectChannelName = (state:RootState) => state.app.channelName;
 export default appSlice.reducer
