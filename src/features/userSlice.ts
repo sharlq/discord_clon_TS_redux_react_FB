@@ -5,7 +5,8 @@ const initialState = {
  user:{
      photo:"",
      uid:"",
-     displayName:""
+     displayName:"",
+     email:""
  }
 }
 
@@ -20,7 +21,8 @@ const userSlice = createSlice({
             state.user = {
                 photo:"",
                 uid:"",
-                displayName:""
+                displayName:"",
+                email:""
             }
         },
     }
