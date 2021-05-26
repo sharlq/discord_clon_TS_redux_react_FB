@@ -3,9 +3,9 @@ import Sidebar from './components/sidebar/sidebar'
 import Chat from './components/chat/Chat'
 import Login from './components/login/login'
 import { useSelector,useDispatch } from 'react-redux'
-import {  selectUser } from './features/userSlice.js'
+import {  selectUser } from './features/userSlice'
 import {auth} from './firebase'
-import {login, logout} from './features/userSlice.js'
+import {login, logout} from './features/userSlice'
 const App =() => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser)

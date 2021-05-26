@@ -6,7 +6,9 @@ import HeadsetIcon from '@material-ui/icons/Headset';
 import SettingsIcon from '@material-ui/icons/Settings';
 import BackspaceIcon from '@material-ui/icons/Backspace';
 import {auth} from "../../firebase"
-const SidebarProfile:React.FC<{pic?:string,id:string,name:string}> = ({pic,id,name}) => {
+
+
+const SidebarProfile:React.FC<{pic?:string|undefined,id:string|undefined,name:string|undefined}> = ({pic,id,name}) => {
    let state1:string = 'icon '
    let state2:string ='icon red dontDisplay'
     return (
@@ -15,7 +17,7 @@ const SidebarProfile:React.FC<{pic?:string,id:string,name:string}> = ({pic,id,na
              <Avatar src={pic} alt={name}  />
              <div className="user">
                  <h4>{name}</h4>
-                 <p>#{id.substring(0,5)}</p>
+                 <p>#{id?(id.substring(0,5)):null}</p>
              </div>
              </div>
             <div className="sidebar-profile_icons">

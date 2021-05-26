@@ -6,7 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import SendIcon from '@material-ui/icons/Send';
 import HelpIcon from '@material-ui/icons/Help';
 import {useSelector} from "react-redux"
-import {selectChannelId,selectChannelName} from "../../features/appSlice"
+import {selectChannelName} from "../../features/appSlice"
 
 const Chatheader:React.FC = () => {
     const channel = useSelector(selectChannelName);
