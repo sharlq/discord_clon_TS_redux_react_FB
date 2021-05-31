@@ -20,6 +20,7 @@ const ChatInput = () => {
                 user:user,
             }) 
              console.log(channelId)
+             setInput("")
         
     }
     return (
